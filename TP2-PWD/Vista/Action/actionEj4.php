@@ -15,9 +15,9 @@ $respuesta = $objControl->leerPelicula($datos);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados - Cinem@s</title>
-    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
-    <script src="../../Utils/jquery-3.7.1.js"></script>
-    <script src="../../Utils/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
 </head>
 
 <body>
