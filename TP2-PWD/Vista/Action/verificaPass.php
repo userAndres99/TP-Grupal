@@ -4,7 +4,7 @@ include_once "../../Control/LoginControl.php";
 include_once "../../Utils/funciones.php";
 
 // Recuperar los datos del formulario
-$datos = darDatosSubmitted();
+$datos = data_submitted();
 
 // Crear una instancia de LoginControl
 $loginControl = new LoginControl();

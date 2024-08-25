@@ -69,124 +69,91 @@ $(document).ready(function() {
 
 //-------------------- ejercicio 4 --------------------
 $(document).ready(function() {
-    $('#formularioCinemas').submit(function(event) {
-        // Variable para controlar si el formulario es válido
-        var valido = true;
+    $("#cineform").validate({
+        rules: {
+            titulo: {
+                required: true
+            },
+            actores: {
+                required: true
+            },
+            director: {
+                required: true
+            },
+            guion: {
+                required: true
+            },
+            produccion: {
+                required: true
+            },
+            año: {
+                required: true,
+                number: true,
+                maxlength: 4
+            },
+            nacionalidad: {
+                required: true
+            },
+            genero: {
+                required: true
+            },
+            duracion: {
+                required: true,
+                number: true,
+                maxlength: 3
+            },
+            restricciones: {
+                required: true
+            },
+            sinopsis: {
+                required: true
+            }
+        },
 
-        // Elimina mensajes de error previos
-        $('.error-message').remove();
+        messages: {
+            titulo: {
+                required: "Debe ingresar un título"
+            },
+            actores: {
+                required: "Debe ingresar al menos un actor"
+            },
+            director: {
+                required: "Debe ingresar un director"
+            },
+            guion: {
+                required: "Debe ingresar el nombre del guionista"
+            },
+            produccion: {
+                required: "Debe ingresar el nombre de la productora"
+            },
+            año: {
+                required: "Debe ingresar el año de lanzamiento",
+                number: "Debe ingresar un número",
+                maxlength: "Debe ingresar hasta 4 caracteres"
+            },
+            nacionalidad: {
+                required: "Debe ingresar la nacionalidad"
+            },
+            genero: {
+                required: "Debe indicar un género"
+            },
+            duracion: {
+                required: "Debe indicar la duración",
+                number: "Debe ingresar un número",
+                maxlength: "Debe ingresar hasta 3 caracteres"
+            },
+            restricciones: {
+                required: "Debe indicar las restricciones etarias"
+            },
+            sinopsis: {
+                required: "Debe ingresar una sinopsis"
+            }
+        },
 
-        // Obtén los valores de los campos
-        var ano = $('#ano').val().trim();
-        var duracion = $('#duracion').val().trim();
-        var titulo = $('#titulo').val().trim();
-        var actores = $('#actores').val().trim();
-        var director = $('#director').val().trim();
-        var guion = $('#guion').val().trim();
-        var produccion = $('#produccion').val().trim();
-        var nacionalidad = $('#nacionalidad').val().trim();
-        var genero = $('#genero').val().trim();
-        var sinopsis = $('#sinopsis').val().trim();
-        
-        // Restablece los estilos de borde antes de la validación
-        $('#ano').css('border', '');
-        $('#duracion').css('border', '');
-        $('#titulo').css('border', '');
-        $('#actores').css('border', '');
-        $('#director').css('border', '');
-        $('#guion').css('border', '');
-        $('#produccion').css('border', '');
-        $('#nacionalidad').css('border', '');
-        $('#genero').css('border', '');
-        $('#sinopsis').css('border', '');
-
-        // Validar campo título
-        if (titulo === '') {
-            $('#titulo').after('<span class="error-message" style="color: red;">Por favor, complete el campo título.</span>');
-            $('#titulo').css('border', '2px solid red');
-            valido = false;
-        }
-
-        // Validar campo actores
-        if (actores === '') {
-            $('#actores').after('<span class="error-message" style="color: red;">Por favor, complete el campo actores.</span>');
-            $('#actores').css('border', '2px solid red');
-            valido = false;
-        }
-
-        // Validar campo director
-        if (director === '') {
-            $('#director').after('<span class="error-message" style="color: red;">Por favor, complete el campo director.</span>');
-            $('#director').css('border', '2px solid red');
-            valido = false;
-        }
-
-        // Validar campo guion
-        if (guion === '') {
-            $('#guion').after('<span class="error-message" style="color: red;">Por favor, complete el campo guion.</span>');
-            $('#guion').css('border', '2px solid red');
-            valido = false;
-        }
-
-        // Validar campo producción
-        if (produccion === '') {
-            $('#produccion').after('<span class="error-message" style="color: red;">Por favor, complete el campo producción.</span>');
-            $('#produccion').css('border', '2px solid red');
-            valido = false;
-        }
-
-        // Validar campo nacionalidad
-        if (nacionalidad === '') {
-            $('#nacionalidad').after('<span class="error-message" style="color: red;">Por favor, complete el campo nacionalidad.</span>');
-            $('#nacionalidad').css('border', '2px solid red');
-            valido = false;
-        }
-
-        // Validar campo año
-        if (ano === '') {
-            $('#ano').after('<span class="error-message" style="color: red;">Por favor, complete el campo año.</span>');
-            $('#ano').css('border', '2px solid red');
-            valido = false;
-        } else if (!/^\d{4}$/.test(ano)) {
-            $('#ano').after('<span class="error-message" style="color: red;">El año debe ser un número de 4 dígitos.</span>');
-            $('#ano').css('border', '2px solid red');
-            valido = false;
-        }
-
-        // Validar campo duración
-        if (duracion === '') {
-            $('#duracion').after('<span class="error-message" style="color: red;">Por favor, complete el campo duración.</span>');
-            $('#duracion').css('border', '2px solid red');
-            valido = false;
-        } else if (!/^\d{1,3}$/.test(duracion)) {
-            $('#duracion').after('<span class="error-message" style="color: red;">La duración debe ser un número de hasta 3 dígitos.</span>');
-            $('#duracion').css('border', '2px solid red');
-            valido = false;
-        }
-
-        // Validar campo género
-        if (genero === '') {
-            $('#genero').after('<span class="error-message" style="color: red;">Por favor, seleccione un género.</span>');
-            $('#genero').css('border', '2px solid red');
-            valido = false;
-        }
-
-        // Validar campo sinopsis
-        if (sinopsis === '') {
-            $('#sinopsis').after('<span class="error-message" style="color: red;">Por favor, complete el campo sinopsis.</span>');
-            $('#sinopsis').css('border', '2px solid red');
-            valido = false;
-        }
-
-        // Validar restricción de edad
-        if (!$('input[name="restriccion"]:checked').val()) {
-            $('legend').after('<span class="error-message" style="color: red;">Por favor, seleccione una restricción de edad.</span>');
-            valido = false;
-        }
-
-        // Si el formulario no es válido, prevenir el envío
-        if (!valido) {
-            event.preventDefault();
+        submitHandler: function(form, e) {
+            console.log("ENVIO DEL FORMULARIO"); //ESTO NO LO MUESTRA EN CONSOLA.
+            e.preventDefault();
+            form.submit();
         }
     });
 });
