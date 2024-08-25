@@ -116,6 +116,6 @@
             <a href="../../Menu.php" class="btn btn-secondary">Volver al menú</a>
     </div>
     <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="Utils/Validaciones.js"></script>
+    <script src="../Utils/Validaciones.js"></script>
 </body>
 </html>
