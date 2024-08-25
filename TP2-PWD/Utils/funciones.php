@@ -1,17 +1,21 @@
 
 <?php
 
-function darDatosSubmitted(){
-    $datos = [];
-
-    //piso el array de datos con los datos que vienen por POST para darles prioridad
-    foreach($_GET as $key => $value){
-        $datos[$key] = $value;
-    }
-    foreach ($_POST as $key => $value){
-        $datos[$key] = $value;
-    }
-    return $datos;
+function data_submitted(){
+    $datos = array();
+    if (!empty($_POST)) 
+    	$datos = $_POST;
+    else 
+		if(!empty($_GET)) {
+            $datos = $_GET;
+		}
+	if (count($datos)){
+		foreach ($datos as $indice => $valor) {
+				if ($valor=="")
+                	$datos[$indice] = 'null'	;
+			}
+	}
+	return $datos;
 }
 
 ?>

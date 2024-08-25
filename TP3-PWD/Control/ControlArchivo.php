@@ -1,9 +1,11 @@
 <?php
+
 class ControlArchivo {
 
     private $dir; // Directorio donde se guardarán los archivos
     private $maxSize; // Tamaño máximo permitido en bytes
     private $types; // Extensiones de archivos permitidas
+
 
     public function __construct($dir = '../../Archivos/', $maxSize = 2097152, $types = ['doc', 'pdf']) {
         $this->dir = $dir;
