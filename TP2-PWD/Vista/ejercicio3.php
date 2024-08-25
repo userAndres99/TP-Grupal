@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- jquery -->
-    <script src="../Utils/jquery-3.7.1.js"></script>
-    <!-- validaciones -->
-    <script src="../Utils/Validaciones.js"></script>
-</head>
-<body>
+<?php
+$Titulo = "Ejercicio 3";
+include_once("estructura/header.php");
+?>
+
     <div class="pt-5 ps-5"> 
         <div class="card-header">
         <h1 class="h4">Consigna</h1>
@@ -38,11 +29,11 @@
         <h4 class="text-center">Member Login</h4>
         <form id="loginForm" name="loginForm" method="post" action="Action/verificaPass.php" >
             <div class="form-group">
-                <img src="Assets/Imagenes/Personita.png" alt="User Icon" class="icon">
+                <img src="Imagenes/Personita.png" alt="User Icon" class="icon">
                 <input name="usuario" type="text" id="usuario" class="form-control" placeholder="Username" required>
             </div>
             <div class="form-group mt-3">
-                <img src="Assets/Imagenes/Candadito.png" alt="Password Icon" class="icon">
+                <img src="Imagenes/Candadito.png" alt="Password Icon" class="icon">
                 <input name="clave" type="password" id="clave" class="form-control" placeholder="Password" required>
             </div>
             <button type="submit" class="btn btn-login mt-4">Login</button>
@@ -54,6 +45,9 @@
     <div class="mt-4 p-5">
             <a href="../../Menu.php" class="btn btn-secondary">Volver al menú</a>
     </div>
-    <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <?php
+
+    include_once("estructura/footer.php");
+    ?>    
 </body>
 </html>

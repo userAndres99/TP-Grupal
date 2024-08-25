@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subir Archivo</title>
-    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
-</head>
-<body>
-    <div class="container mt-4">
+<?php
+$Titulo = "Ejercicio 1";
+include_once("estructura/header.php");
+?>
+
+    <div class="container m-5">
         <div class="card">
             <div class="card-header">
                 <h1 class="h4">Consigna</h1>
@@ -32,6 +28,9 @@
             </div>
         </div>
     </div>
-    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <?php
+
+    include_once("estructura/footer.php");
+    ?>  
 </body>
 </html>

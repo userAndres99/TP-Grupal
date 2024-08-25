@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 5 - Formulario</title>
-    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
-    <!-- Incluir jQuery -->
-    <script src="../Utils/jquery-3.7.1.js"></script>
-    <!-- Incluir archivo de validaciones -->
-    <script src="../Utils/validaciones.js"></script>
-</head>
+<?php
+$Titulo = "Ejercicio 5";
+include_once("estructura/header.php");
+?> 
+
 <body class="bg-light">
     <div class="container mt-5">
     <div class="card-header">
@@ -78,6 +70,9 @@
     <div class="mt-4 p-5">
         <a href="../../Menu.php" class="btn btn-secondary">Volver al menú</a>
     </div>
-    <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <?php
+
+    include_once("estructura/footer.php");
+    ?>    
 </body>
 </html>

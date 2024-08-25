@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinem@s - Formulario</title>
-    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
-    <!-- jquery -->
-    <script src="../Utils/jquery-3.7.1.js"></script>
-    <!-- validaciones -->
-    <script src="../Utils/Validaciones.js"></script>
-</head>
-<body>
+<?php
+$Titulo = "Ejercicio 3";
+include_once("estructura/header.php");
+?>
+
     <div class="card-header">
         <h1 class="h4">Consigna</h1>
     </div>
@@ -111,10 +103,14 @@
             </div>
         </form>
     </div>
-    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="Utils/Validaciones.js"></script>
+
     <div class="mt-4 p-5">
         <a href="../../Menu.php" class="btn btn-secondary">Volver al menú</a>
     </div>
+    <?php
+
+    include_once("estructura/footer.php");
+    ?>  
+
 </body>
 </html>
