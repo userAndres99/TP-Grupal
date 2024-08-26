@@ -3,13 +3,21 @@ $Titulo = "Ejercicio 3";
 include_once("estructura/header.php");
 ?>
 
-    <div class="card-header">
-        <h1 class="h4">Consigna</h1>
+<div class="container my-5">
+    <div class="card">
+        <div class="card-header">
+            <h1 class="h4">Consigna</h1>
+        </div>
+        <div class="card-body">
+
+        <p>Agregue al formulario creado en el ejercicio 10 del práctico 2 un input file que les permita adjuntar la imagen
+            de la película que se está cargando. Cuando se envíe el formulario, se deberá guardar la imagen y luego
+            mostrarla junto con la información cargada en el formulario.
+        </p>
+        </div>
+
     </div>
-    <p>Agregue al formulario creado en el ejercicio 10 del práctico 2 un input file que les permita adjuntar la imagen 
-        de la película que se está cargando. Cuando se envíe el formulario, se deberá guardar la imagen y luego 
-        mostrarla junto con la información cargada en el formulario.
-    </p>
+</div>
     <div class="container mt-5">
         <!-- título -->
         <div class="d-flex align-items-center mb-4">

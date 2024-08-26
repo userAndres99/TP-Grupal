@@ -24,8 +24,7 @@ if ($datos['imagen']) {
 }
 
 // Mostrar los datos del formulario
-$mensaje = $mensajeArchivo;
-$mensaje .= '<div class="alert alert-success" role="alert">';
+$mensaje = '<div class="alert alert-success" role="alert">';
 $mensaje .= '<h4 class="alert-heading">La película introducida es</h4>';
 $mensaje .= '<p><strong>Título:</strong> ' . $datos['titulo'] . '</p>';
 $mensaje .= '<p><strong>Actores:</strong> ' . $datos['actores'] . '</p>';
@@ -55,9 +54,10 @@ $mensaje .= '</div>';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados - Cinem@s</title>
-    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 <body>
+    <div class="container mt-5 bg-light"><?php echo $mensajeArchivo;?></div>
     <div class="container mt-5">
         <?php echo $mensaje; ?>
         <a href="../ejercicio3.php" class="btn btn-secondary mt-3">Volver al formulario</a>
