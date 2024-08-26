@@ -40,6 +40,7 @@
                             TP2
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="ejercicio2.php">Ejercicio 2</a></li>                            
                             <li><a class="dropdown-item" href="ejercicio3.php">Ejercicio 3</a></li>
                             <li><a class="dropdown-item" href="ejercicio4.php">Ejercicio 4</a></li>
                         </ul>
@@ -59,9 +60,3 @@
 
     </nav>
 
-    <!-- jquery -->
-    <script src="js/jquery-3.7.1.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <!-- validaciones -->
-    <script src="js/Validaciones.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>

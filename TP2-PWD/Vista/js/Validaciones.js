@@ -1,4 +1,134 @@
 
+//------------------ejercicio 2 --------------------------------------------------
+
+$(document).ready(function() {
+
+    // cambio mensajes default
+    jQuery.extend(jQuery.validator.messages, {
+        required: "Debe ingresar o seleccionar un valor.",
+        number: "Debe ingresar un número válido.",
+        range: jQuery.validator.format("Debe ingresar un valor entre {0} y {1}."),
+        sololetras: jQuery.validator.format("Sólo debe ingresar letras."),
+        max: jQuery.validator.format("Ingrese un valor menor o igual a {0}."),
+        min: jQuery.validator.format("Ingrese un valor mayor o igual a {0}."),
+    });
+
+    // ejercicio 1 - sólo debemos verificar que un número haya sido ingresado
+    $("#formEj1").validate({
+        rules: {
+            numeroform: {
+                required: true,
+                number: true,
+            },
+        },
+    });
+
+    // ejercicio 2 - identico al anterior, agregando rango de valores
+    $("#formEj2").validate({
+        rules:{
+            lunes:{
+                required: true,
+                number: true,
+                range: [0, 24],
+            },
+            martes:{
+                required: true,
+                number: true,
+                range: [0, 24],
+            },
+            miercoles:{
+                required: true,
+                number: true,
+                range: [0, 24],
+            },
+            jueves:{
+                required: true,
+                number: true,
+                range: [0, 24],
+            },
+            viernes:{
+                required: true,
+                number: true,
+                range: [0, 24],
+            },
+            sabado:{
+                required: true,
+                number: true,
+                range: [0, 24],
+            },
+            domingo:{
+                required: true,
+                number: true,
+                range: [0, 24],
+            },
+        },
+    });
+    
+    // ejercicio 3-6: validaciones de nombre y edad validos, campos requeridos salvo deportes
+
+    // tenemos q agregar metodo custom con regex de letritas pq no viene incluido :v
+    jQuery.validator.addMethod("sololetras", function(value, element) {
+        return this.optional(element) || /^[A-Za-z\s]+$/i.test(value);
+    });
+
+    $("#formEj6").validate({
+        rules:{
+            nombre:{
+                required: true,
+                sololetras: true,
+                maxlength: 40,
+            },
+            apellido:{
+                required: true,
+                sololetras: true,
+                maxlength: 40,
+            },
+            edad:{
+                required: true,
+                number: true,
+                min: 1,
+                max: 120,
+            },
+            sexo:{
+                required: true,
+            },
+            nivelEstudio:{
+                required: true,
+            },
+        }
+    });
+
+    // ejercicio 7: sólo se verifica que se ingrese un valor numérico
+    $("#formEj7").validate({
+        rules:{
+            numero1:{
+                required: true,
+                number: true,
+            },
+            numero2:{
+                required: true,
+                number: true
+            }
+        }
+    });
+
+    // ejercicio 8: todos los campos requeridos, edad válida
+    $("#formEj8").validate({
+        rules:{
+            edad:{
+                required: true,
+                number: true,
+                min: 1,
+                max: 120
+            },
+            estudiante:{
+                required: true
+            }
+        }
+    });
+});
+
+
 //------------------ejercicio 3 --------------------------------------------------
 $(document).ready(function() {
     $('#loginForm').submit(function(event) {
@@ -150,10 +280,13 @@ $(document).ready(function() {
             }
         },
 
+        
+
         submitHandler: function(form, e) {
-            console.log("ENVIO DEL FORMULARIO"); //ESTO NO LO MUESTRA EN CONSOLA.
+            console.log("ENVIO DEL FORMULARIO"); 
             e.preventDefault();
             form.submit();
         }
     });
+
 });

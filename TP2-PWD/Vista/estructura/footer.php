@@ -8,3 +8,10 @@
   </div>
   <!-- Copyright -->
 </footer>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <!-- validaciones -->
+    <script src="js/Validaciones.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>

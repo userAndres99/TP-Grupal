@@ -44,6 +44,7 @@
                         <div class="card-body">
                             <h3 class="card-title text-center">TP2</h3>
                             <div class="list-group mt-3">
+                                <a href="TP2-PWD/Vista/ejercicio2.php" class="list-group-item list-group-item-action">Ejercicio 2</a>                                
                                 <a href="TP2-PWD/Vista/ejercicio3.php" class="list-group-item list-group-item-action">Ejercicio 3</a>
                                 <a href="TP2-PWD/Vista/ejercicio4.php" class="list-group-item list-group-item-action">Ejercicio 4</a>
                             </div>

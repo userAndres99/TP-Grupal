@@ -44,6 +44,7 @@
                             TP2
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="../../TP2-PWD/Vista/ejercicio2.php">Ejercicio 2</a></li>                            
                             <li><a class="dropdown-item" href="../../TP2-PWD/Vista/ejercicio3.php">Ejercicio 3</a></li>
                             <li><a class="dropdown-item" href="../../TP2-PWD/Vista/ejercicio4.php">Ejercicio 4</a></li>
                         </ul>
