@@ -1,8 +1,8 @@
 <?php
 class LoginControl {
     private $usuarios = [
-        ['usuario' => 'juan', 'clave' => '1234'],
-        ['usuario' => 'maria', 'clave' => 'abcd'],
+        ['usuario' => 'juan', 'clave' => '12345abc'],
+        ['usuario' => 'maria', 'clave' => 'abc12345'],
         // Añadir más usuarios según sea necesario
     ];
 
