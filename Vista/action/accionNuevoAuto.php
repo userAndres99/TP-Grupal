@@ -14,6 +14,7 @@ $existePropietario = true;
 $altaValida = false;
 
 if (is_array($propietarioAuto) && count($propietarioAuto)>0){
+    $datos['objDuenio'] = $propietarioAuto[0];
     if ($ABMAuto->alta($datos)){
         $altaValida = true;
     }
