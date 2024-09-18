@@ -13,9 +13,8 @@ class ABMPersona{
         $element = null;
 
         if(count($objetoOnull) === 1){
-            echo "<br>Persona no es null<br>";
             $element = dismount($objetoOnull[0]);
-        }else echo "<br>Persona es null<br>";
+        }
         
         return $element;
     }

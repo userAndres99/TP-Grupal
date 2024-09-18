@@ -2,9 +2,9 @@
 include_once("../estructura/header.php");
 include_once("../../configuracion.php");
 
-$ABMauto = new ABMPersona;
+$ABMpersona = new ABMPersona;
 
-$colDocumentos = $ABMauto->mostrarDNIs();
+$colDocumentos = $ABMpersona->mostrarDNIs();
 
 // print_r($colDocumentos);
 

@@ -14,9 +14,8 @@ class ABMAuto{
         $element = null;
 
         if(count($objetoOnull) === 1){
-            echo "<br>Auto no es null<br>";
             $element = dismount($objetoOnull[0]);
-        }else echo "<br>Auto es null<br>";
+        }
         
         return $element;
     }

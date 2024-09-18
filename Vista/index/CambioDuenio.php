@@ -2,6 +2,15 @@
 
 $titulo = "TP4 - Ejercicio 8";
 include_once("../estructura/header.php");
+include_once("../../configuracion.php");
+
+$ABMpersona = new ABMPersona;
+$ABMauto = new ABMAuto; 
+
+$colDocumentos = $ABMpersona->mostrarDNIs();
+$colPatentes = $ABMauto->mostrarPatentes();
+$cantColumnas = (count($colPatentes) > count($colDocumentos)) ? count($colPatentes) : count($colDocumentos);
+echo $cantColumnas;
 ?>
 
 <div class="container my-5">
@@ -20,6 +29,36 @@ antes generada, no se puede acceder directamente a las clases del ORM.
         </div>
 
     </div>
+    
+    <table class="table mt-4 table-hover table-bordered border-primary">
+    <thead>
+        <tr>
+            <th scope="col" class="table-primary">#</th>
+            <th scope="col" colspan= "<?= $cantColumnas ?>" class="text-center table-light">Datos disponibles </th>
+            
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        <tr>
+            <th scope="row" class="table-primary">Patentes</th>
+            <?php 
+                foreach($colPatentes as $patente){
+                    echo '<td class="table-info">'.$patente.'</td>';
+                }
+            ?>
+        </tr>
+        <tr>
+            <th scope="row" class="table-primary">Documentos</th>
+            <?php 
+            foreach($colDocumentos as $documento){
+                echo '<td class="table-info">'.$documento.'</td>';
+            }
+            ?>
+        </tr>
+    </tbody>
+</table>
+
+
     <div class="card my-5">
         <div class="card-header">
             <h4>Cambio de dueño de un auto en el sistema</h4>
