@@ -4,6 +4,20 @@
 class ABMAuto{
 
     /**
+     * Recibe un arreglo de objetos Auto y retorna un arreglo con todas las patentes de los automóviles
+     * @param array
+     */
+    public function mostrarPatentes(){
+        $arrPatentes = [];
+
+        $colObjAutos = $this->buscar(null);
+        foreach($colObjAutos as $objAuto){
+            $arrPatentes[] = $objAuto->getPatente();
+        }
+        return $arrPatentes;
+    }
+
+    /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
      * @param array $datos
      * @return bool
@@ -131,7 +145,7 @@ class ABMAuto{
     /**
      * permite buscar un objeto
      * @param array $param
-     * @return boolean
+     * @return array
      */
     public function buscar($param){
         $where = " true ";
