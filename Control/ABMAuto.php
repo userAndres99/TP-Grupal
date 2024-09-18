@@ -4,6 +4,24 @@
 class ABMAuto{
 
     /**
+     * Función utilizada en caso que esperemos un arreglo de un solo elemento.
+     * Llama a Buscar, convierte el obj del indice 0 a arreglo y lo retorna.
+     * Si retorna un arreglo vacío, devuelve null.
+     * @return array|null
+     */
+    public function arrayOnull($arrAsoc){
+        $objetoOnull = $this->buscar($arrAsoc);
+        $element = null;
+
+        if(count($objetoOnull) === 1){
+            echo "<br>Auto no es null<br>";
+            $element = dismount($objetoOnull[0]);
+        }else echo "<br>Auto es null<br>";
+        
+        return $element;
+    }
+
+    /**
      * Recibe un arreglo de objetos Auto y retorna un arreglo con todas las patentes de los automóviles
      * @return array
      */
