@@ -1,7 +1,6 @@
 <?php
 include_once("../estructura/header.php");
 include_once("../../configuracion.php");
-include_once("../../configuracion.php");
 /*  Crear una pagina "buscarAuto.php" que contenga un formulario en donde se solicite el numero
 de patente de un auto, estos datos deberán ser enviados a una pagina “accionBuscarAuto.php” en donde
 usando la clase de control correspondiente, se soliciten los datos completos del auto que se corresponda con
@@ -14,8 +13,6 @@ generada, no se puede acceder directamente a las clases del ORM.
 $ABMauto = new ABMAuto;
 
 $colPatentes = $ABMauto->mostrarPatentes();
-echo "mostrarPatentes:<br>";
-print_r($colPatentes);
 ?>
 
 <div class=" container my-5">

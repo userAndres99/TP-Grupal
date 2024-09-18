@@ -1,5 +1,12 @@
 <?php
 include_once("../estructura/header.php");
+include_once("../../configuracion.php");
+
+$ABMauto = new ABMPersona;
+
+$colDocumentos = $ABMauto->mostrarDNIs();
+
+// print_r($colDocumentos);
 
 ?>
 
@@ -20,6 +27,28 @@ antes generada, no se puede acceder directamente a las clases del ORM.
         </div>
 
     </div>
+
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <h4 class="text-center mb-3 fw-light">Documentos disponibles: </h4>
+            <?php 
+                foreach($colDocumentos as $documento){
+                    echo 
+                    '
+                        <div class="col px-5 mx-3">
+                            <div class="card bg-white h-60">
+                                <div class="card-body offset-md-1">
+                                    <p class="card-text">'.$documento.'</p>
+                                </div>
+                            </div>
+                        </div>
+                    ';
+                } 
+            ?>
+
+        </div>
+    </div>
+
     <div class="card my-5">
         <div class="card-header">
             <h4>Búsqueda de persona en el sistema</h4>

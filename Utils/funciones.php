@@ -67,12 +67,10 @@ spl_autoload_register(function ($clase) {
          $GLOBALS['ROOT'].'Control/',
          $GLOBALS['ROOT'].'Modelo/Conector/',
      );
-     print_r($directorys[1].$clase);
      $found = false;
      $i = 0;
      while ($i < count($directorys) && !$found){
         if (file_exists($directorys[$i].$clase.'.php')){
-            print_r($directorys[$i].$clase.'.php');
             require_once($directorys[$i].$clase.'.php');
             $found = true;
         }

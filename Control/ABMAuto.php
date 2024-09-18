@@ -5,7 +5,7 @@ class ABMAuto{
 
     /**
      * Recibe un arreglo de objetos Auto y retorna un arreglo con todas las patentes de los automóviles
-     * @param array
+     * @return array
      */
     public function mostrarPatentes(){
         $arrPatentes = [];

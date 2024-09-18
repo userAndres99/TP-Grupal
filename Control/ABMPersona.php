@@ -3,6 +3,20 @@
 class ABMPersona{
 
     /**
+     * Recibe un arreglo de objetos Persona y retorna un arreglo con todos los DNI.
+     * @return array
+     */
+    public function mostrarDNIs(){
+        $arrDNIs = [];
+
+        $colObjPersonas = $this->buscar(null);
+        foreach($colObjPersonas as $objPersona){
+            $arrDNIs[] = $objPersona->getNroDni();
+        }
+        return $arrDNIs;
+    }
+
+    /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
      * @param array $datos
      * @return bool
