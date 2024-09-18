@@ -61,16 +61,18 @@ function convert_array($param) {
 
 spl_autoload_register(function ($clase) {
     // echo "Cargamos la clase  ".$clase."<br>" ;
+
      $directorys = array(
-         $GLOBALS['ROOT'].'modelo/',
-         $GLOBALS['ROOT'].'control/',
-         $GLOBALS['ROOT'].'modelo/conector/',
+         $GLOBALS['ROOT'].'Modelo/',
+         $GLOBALS['ROOT'].'Control/',
+         $GLOBALS['ROOT'].'Modelo/Conector/',
      );
-    //  print_r($directorys) ;
+     print_r($directorys[1].$clase);
      $found = false;
      $i = 0;
      while ($i < count($directorys) && !$found){
         if (file_exists($directorys[$i].$clase.'.php')){
+            print_r($directorys[$i].$clase.'.php');
             require_once($directorys[$i].$clase.'.php');
             $found = true;
         }
