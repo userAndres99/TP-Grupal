@@ -1,7 +1,7 @@
-## Programación Dinámica - TPs 1, 2 y 3 —ฅ/ᐠ. ̫ .ᐟ\ฅ —
-Implementación de los primeros trabajos prácticos utilizando PHP, HTML, CSS, JS y librerías JQuery y Bootstrap. <br>
-Para la validación usamos JQuery y probamos el plugin de validación de formularios (https://jqueryvalidation.org/) <br>
-Para el estilo de las páginas usamos [Bootstrap 5.3.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/)<br>
+## Programación Dinámica - TP 4 —ฅ/ᐠ. ̫ .ᐟ\ฅ —
+Implementación del cuarto trabajo práctico utilizando PHP+HTML+CSS+JS+Bootstrap y comenzando a manipular bases de datos con MySql y el PDO<br>
+Para la validación comenzamos a implementar los métodos de Bootstrap, al igual que para el estilo de todas las páginas.<br>
+En particular usamos [Bootstrap 5.3.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/)<br>
 Todas las dependencias/librerías están incluídas en el repo :-)
 
 ### Integrantes
