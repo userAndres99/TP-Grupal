@@ -10,7 +10,6 @@ $ABMauto = new ABMAuto;
 $colDocumentos = $ABMpersona->mostrarDNIs();
 $colPatentes = $ABMauto->mostrarPatentes();
 $cantColumnas = (count($colPatentes) > count($colDocumentos)) ? count($colPatentes) : count($colDocumentos);
-echo $cantColumnas;
 ?>
 
 <div class="container my-5">
