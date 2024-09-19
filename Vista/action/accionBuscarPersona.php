@@ -20,21 +20,7 @@ if (is_null($personaSeleccionada)) {
 
 ?>
 
-<!-- <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos de la persona ingresada</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <!-- Incluir jQuery -->
-        <script src="../js/jquery-3.7.1.js"></script>
-    <script src="../js/jquery.validate.min.js"></script>
-    <!-- Incluir el archivo de validaciones -->
-    <script src="../js/Validaciones.js"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
-</head>
-<body> -->
+
 <div class="container my-5">
 
     <div class="card my-5">
