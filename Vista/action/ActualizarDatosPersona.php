@@ -9,7 +9,7 @@ include_once("../estructura/header.php");
 
 $ABMPersona = new ABMPersona();
 $datos = darDatosSubmitted();
-$personaSeleccionada = convert_array($ABMPersona->buscar(['nrodni' => $datos['nrodni']]))[0];
+$personaSeleccionada = $ABMPersona->arrayOnull(['nrodni' => $datos['nrodni']]);
 $errorOp = 0;
 $modificado = false;
 $sinCambios = true;  // el coso para ver si hay cambios
@@ -17,15 +17,13 @@ $sinCambios = true;  // el coso para ver si hay cambios
 // comparar los datos y si diosito quiere sale todo bien
 foreach ($datos as $key => $value) {
     // empezamos a comparar con los datos de la persona seleccionada de la base de datos
-    if (isset($personaSeleccionada[$key]) && $personaSeleccionada[$key] != $value) {
+    if (isset($personaSeleccionada[$key]) && $personaSeleccionada[$key] != $value && $sinCambios==true) {
         $sinCambios = false;
-        break;
     }
 }
 
-
 if (is_array($datos) && count($datos) > 0) {
-    if (is_array($personaSeleccionada) && count($personaSeleccionada) > 0) {
+    if ($personaSeleccionada != null) {
         //si no se modifico nada entonces no vamo por el error 4
         if ($sinCambios) {
             $errorOp = 4;  // Los datos no han cambiado
