@@ -51,7 +51,7 @@ if (is_array($datos) && count($datos)>0){
                 };
             ?>
         </div>
-        <a href="../index/accionBuscarPersona.php" class="btn btn-primary mt-4">Volver atrás</a>
+        <a href="accionBuscarPersona.php" class="btn btn-primary mt-4">Volver atrás</a>
     </div>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <?php include_once("../estructura/footer.php"); ?>

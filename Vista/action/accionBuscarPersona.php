@@ -7,7 +7,16 @@ include_once("../../configuracion.php");
 
 $ABMPersona = new ABMPersona();
 $datos = darDatosSubmitted();
-$personaSeleccionada = convert_array($ABMPersona->buscar($datos))[0];
+$resultadoBusqueda = convert_array($ABMPersona->buscar($datos));
+$personaSeleccionada = !empty($resultadoBusqueda) ? $resultadoBusqueda[0] : null;
+
+if (is_null($personaSeleccionada)) {
+    // Mostrar mensaje de error si no se encuentra la persona
+    echo "<div class='alert alert-danger' role='alert'>La persona ingresada no está en la base de datos.</div>";
+    echo "<a href='../index/BuscarPersona.php' class='btn btn-primary mt-4'>Volver al formulario</a>";
+    include_once("../estructura/footer.php");
+    exit();
+}
 
 ?>
 

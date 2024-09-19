@@ -49,10 +49,11 @@ $listaPersonas = convert_array($ABMPersona->buscar(null));
                 <h4>Buscar autos según titular</h4>
             </card>
             <card class="card-body">
-                <form method="post" action="Action/autosPersona.php">
+                <form method="post" action="../action/autosPersona.php" class="row g-3 needs-validation" novalidate>
                     <div class="mb-3">
                         <label for="nrodni" class="form-label">Ingrese el número de documento:</label>
-                        <input type="text" name="nrodni" id="nrodni" class="form-control" required>
+                        <input type="text" name="nrodni" id="nrodni" class="form-control" pattern="^\d{1,10}$" required>
+                        <div class="invalid-feedback">Debe ingresar un número de documento válido. Hasta diez caracteres.</div>
                     </div>
                     <button type="submit" class="btn btn-primary">Ver listado de autos</button>
                 </form>
