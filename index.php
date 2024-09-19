@@ -7,6 +7,15 @@
     <title>Menú de Ejercicios</title>
     <!--  enlace a Bootstrap para estilizar el menu-->
     <link href="../TP-Grupal/Vista/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Incluir jQuery -->
+        <script src="./Vista/js/jquery-3.7.1.js"></script>
+    <script src="./Vista/js/bootstrap.bundle.min.js"></script>
+    <script defer>
+        // inicializo tooltip
+        $(document).ready(function(){
+            $('[data-bs-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </head>
 
 <body class="bg-light" style="margin-bottom: 60px;">
@@ -17,14 +26,59 @@
 
             <header class="d-flex justify-content-center py-3">
                 <ul class="nav nav-pills">
-                    <li class="nav-item"><a href="Vista/index/buscarAuto.php" class="nav-link">Buscar un auto</a></li>
-                    <li class="nav-item"><a href="Vista/index/BuscarPersona.php" class="nav-link">Buscar una persona</a></li>
-                    <li class="nav-item"><a href="Vista/index/listaPersonas.php" class="nav-link">Ver personas</a></li>
-                    <li class="nav-item"><a href="Vista/index/VerAutos.php" class="nav-link">Ver autos</a></li>
-                    <li class="nav-item"><a href="Vista/index/NuevaPersona.php" class="nav-link">Añadir persona</a></li>
-                    <li class="nav-item"><a href="Vista/index/NuevoAuto.php" class="nav-link">Añadir auto</a></li>
-                    <li class="nav-item"><a href="Vista/index/CambioDuenio.php" class="nav-link">Cambiar titular de auto</a></li>
+                    <li class="nav-item"><a href="../index/buscarAuto.php" class="nav-link" data-bs-toggle="tooltip" 
+                    title="Crear una pagina 'buscarAuto.php' que contenga un formulario en donde se solicite el numero
+                    de patente de un auto, estos datos deberán ser enviados a una pagina 'accionBuscarAuto.php' en donde
+                    usando la clase de control correspondiente, se soliciten los datos completos del auto que se corresponda con
+                    la patente ingresada y mostrar los datos en una tabla. También deberán mostrar los carteles que crean
+                    convenientes en caso de que no se encuentre ningún auto con la patente ingresada">Buscar un auto</a></li>
+
+                    <li class="nav-item"><a href="../index/BuscarPersona.php" class="nav-link" data-bs-toggle="tooltip" 
+                    title="Crear una página 'BuscarPersona.html' que contenga un formulario que permita cargar un
+                    numero de documento de una persona. Estos datos serán enviados a una página 'accionBuscarPersona.php'
+                    busque los datos de la persona cuyo documento sea el ingresado en el formulario los muestre en un nuevo
+                    formulario; a su vez este nuevo formulario deberá permitir modificar los datos mostrados (excepto el nro de
+                    documento) y estos serán enviados a otra página “ActualizarDatosPersona.php” que actualiza los datos de la
+                    persona">Buscar una persona</a></li>
+
+                    <li class="nav-item"><a href="../index/listaPersonas.php" class="nav-link" data-bs-toggle="tooltip" 
+                    title="Crear una página 'listaPersonas.php' que muestre un listado con las personas que se
+                    encuentran cargadas y un link a otra página “autosPersona.php” que recibe un dni de una persona y muestra
+                    los datos de la persona y un listado de los autos que tiene asociados">Ver personas</a></li>
+
+                    <li class="nav-item"><a href="../index/VerAutos.php" class="nav-link" data-bs-toggle="tooltip" 
+                    title="Crear una pagina php “VerAutos.php”, en ella usando la capa de control correspondiente 
+                    mostrar todos los datos de los autos que se encuentran cargados, de los dueños mostrar nombre y apellido.
+                    En caso de que no se encuentre ningún auto cargado en la base mostrar un mensaje indicando que no hay
+                    autos cargados">Ver autos</a></li>
+
+                    <li class="nav-item"><a href="../index/NuevaPersona.php" class="nav-link" data-bs-toggle="tooltip" 
+                    title=" Crear una página 'NuevaPersona.php' que contenga un formulario que permita solicitar todos
+                    los datos de una persona. Estos datos serán enviados a una página 'accionNuevaPersona.php' que cargue
+                    un nuevo registro en la tabla persona de la base de datos. Se debe mostrar un mensaje que indique si se
+                    pudo o no cargar los datos de la persona">Añadir persona</a></li>
+
+                    <li class="nav-item"><a href="../index/NuevoAuto.php" class="nav-link" data-bs-toggle="tooltip" 
+                    title="Crear una página 'NuevoAuto.php' que contenga un formulario en el que se permita cargar
+                    todos los datos de un auto (incluso su dueño). Estos datos serán enviados a una página
+                    'accionNuevoAuto.php' que cargue un nuevo registro en la tabla auto de la base de datos. Se debe chequear
+                    antes que la persona dueña del auto ya se encuentre cargada en la base de datos, de no ser así mostrar un
+                    link a la página que permite carga una nueva persona. Se debe mostrar un mensaje que indique si se pudo o
+                    no cargar los datos">Añadir auto</a></li>
+
+                    <li class="nav-item"><a href="../index/CambioDuenio.php" class="nav-link" data-bs-toggle="tooltip" 
+                    title="Crear una página “CambioDuenio.php” que contenga un formulario en donde se solicite el
+                    numero de patente de un auto y un numero de documento de una persona, estos datos deberán ser enviados
+                    a una página “accionCambioDuenio.php” en donde se realice cambio del dueño del auto de la patente
+                    ingresada en el formulario. Mostrar mensajes de error en caso de que el auto o la persona no se encuentren
+                    cargados">Cambiar titular de auto</a></li>
                 </ul>
+                <style>
+                    .tooltip-inner {
+                       background-color: #3498db; /* Cambia este valor al color que desees */
+                        color: white; /* Cambia el color del texto si es necesario */
+                    }
+                </style>
             </header>
         </div>
     </nav>

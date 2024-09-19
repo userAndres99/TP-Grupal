@@ -11,17 +11,9 @@
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script defer>
         console.log("hola;");
-        // inicializo tooltip
         $(document).ready(function(){
             $('[data-bs-toggle="tooltip"]').tooltip();
         });
-        /* document.addEventListener('DOMContentLoaded', function () {
-        // inicializar tooltip
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl)
-        });
-    }) */;
     </script>
 </head>
 
