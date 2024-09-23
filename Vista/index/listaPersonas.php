@@ -6,8 +6,7 @@ include_once("../../configuracion.php");
 
 $ABMAuto = new ABMAuto;
 $ABMPersona = new ABMPersona;
-$listaPersonas = convert_array($ABMPersona->buscar(null));
-
+$listaPersonas = $ABMPersona->buscarArray(null);
 ?>
 
 <div class="container my-5">

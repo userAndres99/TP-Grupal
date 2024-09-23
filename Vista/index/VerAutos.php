@@ -7,8 +7,7 @@ include_once("../../configuracion.php");
 $ABMAuto = new ABMAuto;
 $ABMPersona = new ABMPersona;
 // devuelvo todos los autos
-$lista = convert_array($ABMAuto->buscar(null));
-
+$lista = $ABMAuto->buscarArray(null);
 ?>
 
 <div class="container my-5">

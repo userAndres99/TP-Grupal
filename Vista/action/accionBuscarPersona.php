@@ -7,7 +7,8 @@ include_once("../../configuracion.php");
 
 $ABMPersona = new ABMPersona();
 $datos = darDatosSubmitted();
-$resultadoBusqueda = convert_array($ABMPersona->buscar($datos));
+
+$resultadoBusqueda = $ABMPersona->buscarArray($datos);
 $personaSeleccionada = !empty($resultadoBusqueda) ? $resultadoBusqueda[0] : null;
 
 if (is_null($personaSeleccionada)) {

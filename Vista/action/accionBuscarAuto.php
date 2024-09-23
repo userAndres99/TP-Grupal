@@ -11,10 +11,18 @@ include_once("../estructura/header.php");
 include_once("../../configuracion.php");
 
 
-$ABMauto = new ABMAuto;
+$ABMAuto = new ABMAuto;
 $datos = darDatosSubmitted();
 
-$autoBuscado = convert_array($ABMauto->buscar($datos));
+// $autoBuscado = convert_array($ABMAuto->buscar($datos));
+// $autoBuscado = $ABMAuto->buscarArray($datos);
+
+$autoBuscado = $ABMAuto->arrayOnull($datos);
+// echo "<br>autoBuscado duenio<br>";
+// print_r([$autoBuscado['objDuenio']]);
+// echo "<br>duenio<br>";
+// $duenio = $ABMAuto->arrayOnull([ $autoBuscado['objDuenio']]);
+// print_r($duenio);
 
 ?>
 <!-- <!DOCTYPE html>
@@ -42,11 +50,11 @@ $autoBuscado = convert_array($ABMauto->buscar($datos));
                     <!-- <th scope="row">1</th> -->
                      <?php 
                         if ($datos && is_array($autoBuscado) && count($autoBuscado)>0){
-                            echo '<td class="font-monospace text-primary fw-bold">' . $autoBuscado[0]['patente'] . '</td>';
-                            echo '<td class="font-monospace text-primary fw-bold">' . $autoBuscado[0]['marca'] . '</td>';
-                            echo '<td class="font-monospace text-primary fw-bold">' . $autoBuscado[0]['modelo'] . '</td>';
-                            echo '<td class="font-monospace text-primary fw-bold">' . convert_array([$autoBuscado[0]['objDuenio']])[0]['nombre'] . '</td>';
-                            echo '<td class="font-monospace text-primary fw-bold">' . convert_array([$autoBuscado[0]['objDuenio']])[0]['apellido'] . '</td>';
+                            echo '<td class="font-monospace text-primary fw-bold">' . $autoBuscado['patente'] . '</td>';
+                            echo '<td class="font-monospace text-primary fw-bold">' . $autoBuscado['marca'] . '</td>';
+                            echo '<td class="font-monospace text-primary fw-bold">' . $autoBuscado['modelo'] . '</td>';
+                            echo '<td class="font-monospace text-primary fw-bold">' . convert_array([$autoBuscado['objDuenio']])[0]['nombre'] . '</td>';
+                            echo '<td class="font-monospace text-primary fw-bold">' . convert_array([$autoBuscado['objDuenio']])[0]['apellido'] . '</td>';
                         } else echo '<td class=" text-bg-warning text-center" colspan="5">No hay autos con la patente <b>'.$datos['Patente'].'</b> en el sistema.</td>';
                      ?>
                 </tr>  

@@ -10,8 +10,7 @@ include_once("../estructura/header.php");
 $ABMAuto = new ABMAuto;
 $ABMPersona = new ABMPersona;
 $dniPersona = darDatosSubmitted();
-$listaAutos = convert_array($ABMAuto->buscar(['DniDuenio' => $dniPersona['nrodni']]));
-
+$listaAutos = $ABMAuto->buscarArray(['DniDuenio' => $dniPersona['nrodni']]);
 ?>
 
 <!-- <!DOCTYPE html>

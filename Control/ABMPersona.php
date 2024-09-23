@@ -176,6 +176,17 @@ class ABMPersona{
         $arreglo = $personita->listar($where);  
         return $arreglo;
     }
+
+    /**
+     * recibe como parámetro un arreglo de objetos (retornado del Buscar) 
+     * y retorna un arreglo con arreglos asociativos.
+     * @param array $param
+     * @return array  
+     */
+    public function buscarArray($param){
+        $arreglo = convert_array($this->buscar($param));
+        return $arreglo;
+    }
     
 }
 ?>
