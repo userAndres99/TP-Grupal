@@ -10,6 +10,20 @@ include_once("../estructura/header.php");
 $ABMAuto = new ABMAuto;
 $ABMPersona = new ABMPersona;
 $dniPersona = darDatosSubmitted();
+
+$personaSeleccionada = $ABMPersona->arrayOnull(['nrodni' => $dniPersona['nrodni']]);
+
+if (is_null($personaSeleccionada)) {
+    // Mostrar mensaje de error si no se encuentra la persona
+    echo "<div class='alert alert-danger' role='alert'>No se encuentra registrado el titular.</div>";
+    echo "<a href='../index/BuscarPersona.php' class='btn btn-primary mt-4'>Volver al formulario</a>";
+    include_once("../estructura/footer.php");
+    exit();
+}
+
+
+
+
 $listaAutos = $ABMAuto->buscarArray(['DniDuenio' => $dniPersona['nrodni']]);
 ?>
 
