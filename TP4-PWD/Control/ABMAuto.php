@@ -74,7 +74,7 @@ class ABMAuto{
             if (is_array($param['objDuenio'])){
                 if(array_key_exists('nroDni',$param['objDuenio'])){
                     $persona = new ABMPersona();
-                    $objDuenio = $persona->buscar($param['objDuenio']['nroDni']);
+                    $objDuenio = $persona->buscar(['nrodni' => $param['objDuenio']['nroDni']]);
                     if (is_array($objDuenio) && count($objDuenio)>0){
                         $obj->setear($param['patente'], $param['marca'], $param['modelo'], $objDuenio[0]);
                     }
