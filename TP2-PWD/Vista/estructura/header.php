@@ -50,8 +50,8 @@
                             TP3
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="../../../TP3-PWD/Vista/index/ejercicio2.php">Ejercicio 2</a></li>
                             <li><a class="dropdown-item" href="../../../TP3-PWD/Vista/index/ejercicio1.php">Ejercicio 1</a></li>
+                            <li><a class="dropdown-item" href="../../../TP3-PWD/Vista/index/ejercicio2.php">Ejercicio 2</a></li>
                             <li><a class="dropdown-item" href="../../../TP3-PWD/Vista/index/ejercicio3.php">Ejercicio 3</a></li>
                         </ul>
                     </div>

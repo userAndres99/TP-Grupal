@@ -3,7 +3,7 @@ $Titulo = "Ejercicio 1";
 include_once("../estructura/header.php");
 ?>
 
-    <div class="container m-5">
+    <div class="container my-5">
         <div class="card">
             <div class="card-header">
                 <h1 class="h4">Consigna</h1>
