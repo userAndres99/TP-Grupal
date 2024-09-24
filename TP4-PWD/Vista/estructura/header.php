@@ -14,6 +14,12 @@
             $('[data-bs-toggle="tooltip"]').tooltip();
         });
     </script>
+    <style>
+        .input-hover:hover {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+    </style>
 </head>
 
 <!-- bg-light un fondo claro-->

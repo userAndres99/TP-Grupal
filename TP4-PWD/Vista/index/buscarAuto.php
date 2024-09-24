@@ -63,7 +63,7 @@ $colPatentes = $ABMauto->mostrarPatentes();
             <form method="post" action="../action/accionBuscarAuto.php" id="formBuscarAuto" name="formBuscarAuto" class="needs-validation" novalidate>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">ingrese el numero de patente</span>
-                    <input type="text" id="Patente" name="Patente" class="form-control" pattern="^[A-Z]{3}[\s]{1}[0-9]{3}$" required>
+                    <input type="text" id="Patente" name="Patente" class="form-control  input-hover" pattern="^[A-Z]{3}[\s]{1}[0-9]{3}$" required>
                     <div class="invalid-feedback">Debe ingresar un número de patente de formato ABC 123</div>
                     <input type="submit" class="btn btn-primary mx-2" value="Buscar">
                 </div>
