@@ -34,7 +34,7 @@ include_once("../estructura/header.php");
                 <h5 class="my-3">Ingrese un número</h5>
 
                 <!--el novalidate desactiva la validaciones de html5 para probar jquery -->
-                <form id="formEj1" name="formEj1" method="get" action="../Action/ej2/actionEj2-1.php">
+                <form id="formEj1" name="formEj1" method="get" action="../Action/actionEj2-1.php">
                     <div class="form-group">
                         <label for="numeroform">Número:</label>
                         <!-- Input para solicitar el número -->
@@ -64,7 +64,7 @@ include_once("../estructura/header.php");
             </p>
 
             <h5 class="my-3">Ingrese las Horas de Cursada</h5>
-            <form id="formEj2" name="formEj2" method="get" action="../Action/ej2/actionEj2-2.php">
+            <form id="formEj2" name="formEj2" method="get" action="../Action/actionEj2-2.php">
                 <div class="row row-cols-2">
                     <div class="mb-3">
                         <label for="lunes">Lunes:</label>
@@ -113,7 +113,7 @@ include_once("../estructura/header.php");
                 que procesa el formulario la cantidad de deportes que practica.
             </p>
             <h5 class="my-3">Ingrese sus datos</h5>
-            <form id="formEj6" name="formEj6" method="get" action="../Action/ej2/actionEj2-6.php">
+            <form id="formEj6" name="formEj6" method="get" action="../Action/actionEj2-6.php">
                 <div class="row row-cols-2">
 
                     <div class="mb-3">
@@ -194,7 +194,7 @@ include_once("../estructura/header.php");
                 uno de los operandos y el resultado obtenido de resolver la operación.
             </p>
             <h5 class="my-3">Operaciones Matemáticas</h5>
-            <form id="formEj7" name="formEj7" method="get" action="../Action/ej2/actionEj2-7.php">
+            <form id="formEj7" name="formEj7" method="get" action="../Action/actionEj2-7.php">
                 <div class="mb-3">
                     <label for="numero1" class="form-label">Número 1:</label>
                     <input name="numero1" type="text" id="numero1" class="form-control" required>
@@ -235,7 +235,7 @@ include_once("../estructura/header.php");
                 Agregar un botón para limpiar el formulario y volver a consultar.
             </p>
             <h5 class="my-3">Calcula el Precio de tu Entrada</h5>
-            <form id="formEj8" name="formEj8" method="get" action="../Action/ej2/actionEj2-8.php">
+            <form id="formEj8" name="formEj8" method="get" action="../Action/actionEj2-8.php">
                 <div class="mb-3">
                     <label for="edad" class="form-label">Edad:</label>
                     <input name="edad" type="number" id="edad" class="form-control" required>
