@@ -15,7 +15,8 @@ $ABMAuto = new ABMAuto;
 $datos = darDatosSubmitted();
 
 $autoBuscado = $ABMAuto->arrayOnull($datos);
-$arrDuenio = $ABMAuto->buscarArray($autoBuscado['objDuenio']);
+
+if ($autoBuscado <> null) $arrDuenio = $ABMAuto->buscarArray($autoBuscado['objDuenio']);
 
 ?>
 <!-- <!DOCTYPE html>
