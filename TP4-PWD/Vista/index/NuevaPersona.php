@@ -26,32 +26,32 @@ include_once("../estructura/header.php");
             <form action="../action/accionNuevaPersona.php" class="row g-3 needs-validation" id="formPersona" name="formPersona" method="post" novalidate>
                 <div class="col-md-6">
                     <label for="nrodni" class="form-label fw-bold text-secondary">Número de documento:</label>
-                    <input type="text" class="form-control" name="nrodni" pattern="^\d{1,10}$" required>
+                    <input type="text" class="form-control  input-hover" name="nrodni" pattern="^\d{1,10}$" required>
                     <div class="invalid-feedback">Debe ingresar un número de documento válido. Hasta diez caracteres.</div>
                 </div>
                 <div class="col-md-6">
                     <label for="fechanac" class="form-label fw-bold text-secondary">Fecha de nacimiento:</label>
-                    <input type="date" class="form-control" name="fechanac" required>
+                    <input type="date" class="form-control input-hover" name="fechanac" required>
                     <div class="invalid-feedback">Debe ingresar una fecha de nacimiento válida</div>
                 </div>
                 <div class="col-md-6">
                     <label for="apellido" class="form-label fw-bold text-secondary">Apellido:</label>
-                    <input type="text" class="form-control" name="apellido" pattern="^[\s]*[A-Za-z]+[\s]*[A-Za-z]*[\s]*$" maxlength="50" required>
+                    <input type="text" class="form-control input-hover" name="apellido" pattern="^[\s]*[A-Za-z]+[\s]*[A-Za-z]*[\s]*$" maxlength="50" required>
                     <div class="invalid-feedback">Debe ingresar un apellido.</div>
                 </div>
                 <div class="col-md-6">
                     <label for="nombre" class="form-label fw-bold text-secondary">Nombre:</label>
-                    <input type="text" class="form-control" name="nombre" pattern="^[\s]*[A-Za-z]+[\s]*[A-Za-z]*[\s]*$" maxlength="50" required>
+                    <input type="text" class="form-control input-hover" name="nombre" pattern="^[\s]*[A-Za-z]+[\s]*[A-Za-z]*[\s]*$" maxlength="50" required>
                     <div class="invalid-feedback">Debe ingresar un nombre válido.</div>
                 </div>
                 <div class="col-md-6">
                     <label for="telefono" class="form-label fw-bold text-secondary">Teléfono:</label>
-                    <input type="text" class="form-control" name="telefono" pattern="^\d{3}-{1}\d{7}$" required>
+                    <input type="text" class="form-control  input-hover" name="telefono" pattern="^\d{3}-{1}\d{7}$" required>
                     <div class="invalid-feedback">Debe ingresar un número de teléfono de tipo XXX-XXXXXXX</div>
                 </div>
                 <div class="col-md-6">
                     <label for="domicilio" class="form-label fw-bold text-secondary">Domicilio:</label>
-                    <input type="text" class="form-control" name="domicilio" pattern=".*\w+.*" maxlength="200" required>
+                    <input type="text" class="form-control input-hover" name="domicilio" pattern=".*\w+.*" maxlength="200" required>
                     <div class="invalid-feedback">Debe ingresar un domicilio.</div>
                 </div>
                 <div class="d-flex p-2 justify-content-center">

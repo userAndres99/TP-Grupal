@@ -51,7 +51,7 @@ $listaPersonas = $ABMPersona->buscarArray(null);
                 <form method="post" action="../action/autosPersona.php" class="row g-3 needs-validation" novalidate>
                     <div class="mb-3">
                         <label for="nrodni" class="form-label">Ingrese el número de documento:</label>
-                        <input type="text" name="nrodni" id="nrodni" class="form-control" pattern="^\d{1,10}$" required>
+                        <input type="text" name="nrodni" id="nrodni" class="form-control  input-hover" pattern="^\d{1,10}$" required>
                         <div class="invalid-feedback">Debe ingresar un número de documento válido. Hasta diez caracteres.</div>
                     </div>
                     <button type="submit" class="btn btn-primary">Ver listado de autos</button>

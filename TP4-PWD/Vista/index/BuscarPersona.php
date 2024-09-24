@@ -58,7 +58,7 @@ antes generada, no se puede acceder directamente a las clases del ORM.
             <form action="../action/accionBuscarPersona.php" class="row g-3 needs-validation" id="formBuscarPersona" name="formBuscarPersona" method="post" novalidate>
                 <div class="col-md-6">
                     <label for="nroDni" class="form-label fw-bold text-secondary">Ingrese el número de documento:</label>
-                    <input type="text" class="form-control" name="nrodni" pattern="^\d{1,10}$" required>
+                    <input type="text" class="form-control  input-hover" name="nrodni" pattern="^\d{1,10}$" required>
                     <div class="invalid-feedback">Debe ingresar un número de documento válido. Hasta diez caracteres.</div>
                 </div>
                 <div class="d-flex p-2 justify-content-center">

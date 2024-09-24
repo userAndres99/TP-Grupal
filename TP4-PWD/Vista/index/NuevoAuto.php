@@ -32,22 +32,22 @@ control antes generada, no se puede acceder directamente a las clases del ORM.
             <form action="../action/accionNuevoAuto.php" class="row g-3 needs-validation" id="formAuto" name="formAuto" method="post" novalidate>
                 <div class="col-md-6">
                     <label for="patente" class="form-label fw-bold text-secondary">Patente:</label>
-                    <input type="text" class="form-control" name="patente" pattern="^[A-Z]{3}[\s]{1}[0-9]{3}$" required>
+                    <input type="text" class="form-control input-hover" name="patente" pattern="^[A-Z]{3}[\s]{1}[0-9]{3}$" required>
                     <div class="invalid-feedback">Debe ingresar un número de patente de formato ABC 123</div>
                 </div>
                 <div class="col-md-6">
                     <label for="marca" class="form-label fw-bold text-secondary">Marca:</label>
-                    <input type="text" class="form-control" name="marca" maxlength="50" required>
+                    <input type="text" class="form-control input-hover" name="marca" maxlength="50" required>
                     <div class="invalid-feedback">Debe ingresar una marca menor a 50 caracteres</div>
                 </div>
                 <div class="col-md-6">
                     <label for="modelo" class="form-label fw-bold text-secondary">Modelo:</label>
-                    <input type="text" class="form-control" name="modelo" pattern="^\d+$" maxlength="11" required>
+                    <input type="text" class="form-control input-hover" name="modelo" pattern="^\d+$" maxlength="11" required>
                     <div class="invalid-feedback">El modelo debe ser un número de hasta 11 caracteres</div>
                 </div>
                 <div class="col-md-6">
                     <label for="dniduenio" class="form-label fw-bold text-secondary">DNI del dueño:</label>
-                    <input type="text" class="form-control" name="dniduenio" pattern="^\d{1,10}$" maxlenght="10" required>
+                    <input type="text" class="form-control input-hover" name="dniduenio" pattern="^\d{1,10}$" maxlenght="10" required>
                     <div class="invalid-feedback">Debe ingresar un número de documento válido. Hasta diez caracteres.</div>
                 </div>
                 <div class="d-flex p-2 justify-content-center">

@@ -37,27 +37,27 @@ if (is_null($personaSeleccionada)) {
                 </div>
                 <div class="col-md-6">
                     <label for="fechanac" class="form-label fw-bold text-secondary">Fecha de nacimiento:</label>
-                    <input type="date" class="form-control" name="fechanac" value="<?php echo $personaSeleccionada['fechaNac'];?>" required>
+                    <input type="date" class="form-control input-hover" name="fechanac" value="<?php echo $personaSeleccionada['fechaNac'];?>" required>
                     <div class="invalid-feedback">Debe ingresar una fecha de nacimiento válida</div>
                 </div>
                 <div class="col-md-6">
                     <label for="apellido" class="form-label fw-bold text-secondary">Apellido:</label>
-                    <input type="text" class="form-control" name="apellido" value="<?php echo $personaSeleccionada['apellido'];?>" pattern="^[\s]*[A-Za-z]+[\s]*[A-Za-z]*[\s]*$" maxlength="50" required>
+                    <input type="text" class="form-control input-hover" name="apellido" value="<?php echo $personaSeleccionada['apellido'];?>" pattern="^[\s]*[A-Za-z]+[\s]*[A-Za-z]*[\s]*$" maxlength="50" required>
                     <div class="invalid-feedback">Debe ingresar un apellido.</div>
                 </div>
                 <div class="col-md-6">
                     <label for="nombre" class="form-label fw-bold text-secondary">Nombre:</label>
-                    <input type="text" class="form-control" name="nombre" value="<?php echo $personaSeleccionada['nombre'];?>" pattern="^[\s]*[A-Za-z]+[\s]*[A-Za-z]*[\s]*$" maxlength="50" required>
+                    <input type="text" class="form-control input-hover" name="nombre" value="<?php echo $personaSeleccionada['nombre'];?>" pattern="^[\s]*[A-Za-z]+[\s]*[A-Za-z]*[\s]*$" maxlength="50" required>
                     <div class="invalid-feedback">Debe ingresar un nombre válido.</div>
                 </div>
                 <div class="col-md-6">
                     <label for="telefono" class="form-label fw-bold text-secondary">Teléfono:</label>
-                    <input type="text" class="form-control" name="telefono" value="<?php echo $personaSeleccionada['telefono'];?>" pattern="^\d{3}-{1}\d{7}$" required>
+                    <input type="text" class="form-control input-hover" name="telefono" value="<?php echo $personaSeleccionada['telefono'];?>" pattern="^\d{3}-{1}\d{7}$" required>
                     <div class="invalid-feedback">Debe ingresar un número de teléfono de tipo XXX-XXXXXXX</div>
                 </div>
                 <div class="col-md-6">
                     <label for="domicilio" class="form-label fw-bold text-secondary">Domicilio:</label>
-                    <input type="text" class="form-control" name="domicilio" value="<?php echo $personaSeleccionada['domicilio'];?>" name="domicilio" pattern=".*\w+.*" maxlength="200" required>
+                    <input type="text" class="form-control input-hover" name="domicilio" value="<?php echo $personaSeleccionada['domicilio'];?>" name="domicilio" pattern=".*\w+.*" maxlength="200" required>
                     <div class="invalid-feedback">Debe ingresar un domicilio.</div>
                 </div>
                 <div class="d-flex p-2 justify-content-center">

@@ -67,12 +67,12 @@ antes generada, no se puede acceder directamente a las clases del ORM.
             <form action="../action/accionCambioDuenio.php" class="row g-3 needs-validation" id="formCambioDuenio" name="formCambioDuenio" method="post" novalidate>
                 <div class="col-md-6">
                     <label for="patente" class="form-label fw-bold text-secondary">Ingrese el número de patente:</label>
-                    <input type="text" class="form-control" name="Patente" pattern="^[A-Z]{3}[\s]{1}[0-9]{3}$" required>
+                    <input type="text" class="form-control input-hover" name="Patente" pattern="^[A-Z]{3}[\s]{1}[0-9]{3}$" required>
                     <div class="invalid-feedback">Debe ingresar un número de patente de formato ABC 123</div>
                 </div>
                 <div class="col-md-6">
                     <label for="nrodni" class="form-label fw-bold text-secondary">Ingrese el número de documento del nuevo dueño:</label>
-                    <input type="text" class="form-control" name="DniDuenio" pattern="^\d{1,10}$" required>
+                    <input type="text" class="form-control input-hover" name="DniDuenio" pattern="^\d{1,10}$" required>
                     <div class="invalid-feedback">Debe ingresar un número de documento válido. Hasta diez caracteres.</div>
                 </div>
                 <div class="d-flex p-2 justify-content-center">
