@@ -1,7 +1,7 @@
 <?php
 include_once("../estructura/header.php");
-include_once "../../../Control/ej2/verhoras.php";
-include_once "../../../Utils/funciones.php"; // Incluye funciones.php para utilizar data_submitted()
+include_once "../../Control/ej2/verhoras.php";
+include_once "../../Utils/funciones.php"; // Incluye funciones.php para utilizar data_submitted()
 
     // Recuperar todos los datos enviados, ya sea por GET o POST
     $datos = data_submitted();

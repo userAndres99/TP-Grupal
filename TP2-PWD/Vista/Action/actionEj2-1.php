@@ -1,8 +1,8 @@
 
 <?php
     include_once("../estructura/header.php");
-    include_once "../../../Control/ej2/vernumero.php";
-    include_once "../../../Utils/funciones.php";
+    include_once "../../Control/ej2/vernumero.php";
+    include_once "../../Utils/funciones.php";
     //las tareas que van a ir en la carpeta action es recuperar los datos de la interfaz
     //en este caso seria solo el numero el que se tiene que recuperar
 

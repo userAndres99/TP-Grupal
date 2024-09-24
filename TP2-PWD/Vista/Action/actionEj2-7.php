@@ -1,7 +1,7 @@
 <?php
 include_once("../estructura/header.php");
-include_once "../../../Control/ej2/calculadora.php";
-include_once "../../../Utils/funciones.php";
+include_once "../../Control/ej2/calculadora.php";
+include_once "../../Utils/funciones.php";
 
 // Obtener los datos enviados
 $datos = data_submitted();
