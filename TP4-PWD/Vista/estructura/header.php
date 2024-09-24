@@ -10,7 +10,6 @@
     <script src="../js/jquery-3.7.1.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script defer>
-        console.log("hola;");
         $(document).ready(function(){
             $('[data-bs-toggle="tooltip"]').tooltip();
         });
@@ -23,7 +22,46 @@
 
     <nav class="navbar navbar-expand-lg bg-gradient shadow">
         <div class="container-fluid">
-            <a class="navbar-brand text-primary m-2 h1" href="../../index.php">TP4G1 - INFOAUTOS</a>
+            <a class="navbar-brand text-primary m-2 h1" href="../../../Menu.php">MENÚ PRINCIPAL</a>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="dropdown px-2">
+                        <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            TP1
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="../../../TP1-PWD/Vista/index/ejercicio1.php">Ejercicio 1</a></li>
+                            <li><a class="dropdown-item" href="../../../TP1-PWD/Vista/index/ejercicio2.php">Ejercicio 2</a></li>
+                            <li><a class="dropdown-item" href="../../../TP1-PWD/Vista/index/ejercicio3.php">Ejercicio 3</a></li>
+                            <li><a class="dropdown-item" href="../../../TP1-PWD/Vista/index/ejercicio4.php">Ejercicio 4</a></li>
+                            <li><a class="dropdown-item" href="../../../TP1-PWD/Vista/index/ejercicio5.php">Ejercicio 5</a></li>
+                            <li><a class="dropdown-item" href="../../../TP1-PWD/Vista/index/ejercicio6.php">Ejercicio 6</a></li>
+                            <li><a class="dropdown-item" href="../../../TP1-PWD/Vista/index/ejercicio7.php">Ejercicio 7</a></li>
+                            <li><a class="dropdown-item" href="../../../TP1-PWD/Vista/index/ejercicio8.php">Ejercicio 8</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            TP2
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="../../../TP2-PWD/Vista/index/ejercicio2.php">Ejercicio 2</a></li>                            
+                            <li><a class="dropdown-item" href="../../../TP2-PWD/Vista/index/ejercicio3.php">Ejercicio 3</a></li>
+                            <li><a class="dropdown-item" href="../../../TP2-PWD/Vista/index/ejercicio4.php">Ejercicio 4</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown px-2">
+                        <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            TP3
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="../../../TP3-PWD/Vista/index/ejercicio2.php">Ejercicio 2</a></li>
+                            <li><a class="dropdown-item" href="../../../TP3-PWD/Vista/index/ejercicio1.php">Ejercicio 1</a></li>
+                            <li><a class="dropdown-item" href="../../../TP3-PWD/Vista/index/ejercicio3.php">Ejercicio 3</a></li>
+                        </ul>
+                    </div>
+            </div>
 
             <header class="d-flex justify-content-center py-3">
                 <ul class="nav nav-pills">
