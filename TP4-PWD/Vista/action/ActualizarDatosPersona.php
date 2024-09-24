@@ -9,7 +9,8 @@ include_once("../estructura/header.php");
 
 $ABMPersona = new ABMPersona();
 $datos = darDatosSubmitted();
-$personaSeleccionada = $ABMPersona->arrayOnull(['nrodni' => $datos['nrodni']]);
+// cambio case de claves para que coincidan con las de $datos al comparar valores
+$personaSeleccionada = array_change_key_case($ABMPersona->arrayOnull(['nrodni' => $datos['nrodni']]), CASE_LOWER);
 $errorOp = 0;
 $modificado = false;
 $sinCambios = true;  // el coso para ver si hay cambios
