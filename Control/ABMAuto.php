@@ -148,7 +148,7 @@ class ABMAuto{
      * @return boolean
      */
     public function modificacion($param){
-        //echo "Estoy en modificacion";
+        
         $resp = false;
         if ($this->seteadosCamposClaves($param)){
             $objAuto = $this->cargarObjeto($param);
@@ -180,13 +180,19 @@ class ABMAuto{
     }
 
     /**
-     * recibe como parámetro un arreglo de objetos (retornado del Buscar) 
-     * y retorna un arreglo con arreglos asociativos.
-     * @param array $param
+     * Si recibe como parámetro un arreglo asociativo clave-valor, llama al Buscar  
+     * y retorna un arreglo con arreglos asociativos. 
+     * Si recibe como parámetro un objeto, convierte sus propiedades en un arreglo asociativo.
+     * @param array|object $param
      * @return array  
      */
     public function buscarArray($param){
-        $arreglo = convert_array($this->buscar($param));
+        $arreglo = [];
+        if(is_object($param)){
+            $arreglo = dismount($param);
+        }else{
+            $arreglo = convert_array($this->buscar($param));
+        }
         return $arreglo;
     }
     
