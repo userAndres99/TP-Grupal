@@ -12,14 +12,25 @@ $ABMAuto = new ABMAuto();
 $propietarioAuto = $ABMPersona->buscar(['nrodni' => $datos['dniduenio']]);
 $existePropietario = true;
 $altaValida = false;
+$patenteExistente = false;
 
-if (is_array($propietarioAuto) && count($propietarioAuto)>0){
-    $datos['objDuenio'] = $propietarioAuto[0];
-    if ($ABMAuto->alta($datos)){
-        $altaValida = true;
+// Verificar si la patente ya está registrada usando arrayOnull
+$autoExistente = $ABMAuto->arrayOnull(['Patente' => $datos['patente']]);
+
+if (!is_null($autoExistente)) {
+    $patenteExistente = true;
+}
+
+if (!$patenteExistente) {
+    if (is_array($propietarioAuto) && count($propietarioAuto) > 0) {
+        $datos['objDuenio'] = $propietarioAuto[0];
+        if ($ABMAuto->alta($datos)) {
+            $altaValida = true;
+        }
+    } else {
+        $existePropietario = false;
     }
-} else $existePropietario = false;
-
+}
 ?>
 
 <!-- <!DOCTYPE html>
@@ -31,21 +42,27 @@ if (is_array($propietarioAuto) && count($propietarioAuto)>0){
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 <body> -->
-    <div class="container mt-5">
-        <h1 class="text-center">Resultado del Alta</h1>
-        <div class="alert <?php echo $altaValida ? 'alert-success' : 'alert-danger'; ?> mt-4">
-            <?php
-                if ($existePropietario){
-                    if ($altaValida){
-                        echo "El auto fue correctamente ingresado.";
-                    } else echo "No pudo realizarse la inserción del auto en el sistema.";
-                } else echo '<p>No existe un propietario con ese número de documento en nuestro sistema.</p>
-                        <a href="../NuevaPersona.php" class="btn btn-primary mt-4">Dar de alta un nuevo usuario</a>'
-            ?>
-        </div>
-        <a href="../index/NuevoAuto.php" class="btn btn-primary mt-4">Volver al formulario</a>
+<div class="container mt-5">
+    <h1 class="text-center">Resultado del Alta</h1>
+    <div class="alert <?php echo $altaValida ? 'alert-success' : 'alert-danger'; ?> mt-4">
+        <?php
+        if ($patenteExistente) {
+            echo "La patente que intenta ingresar ya se encuentra en la base de datos registrada.";
+        } elseif ($existePropietario) {
+            if ($altaValida) {
+                echo "El auto fue correctamente ingresado.";
+            } else {
+                echo "No pudo realizarse la inserción del auto en el sistema.";
+            }
+        } else {
+            echo '<p>No existe un propietario con ese número de documento en nuestro sistema.</p>
+                  <a href="../index/NuevaPersona.php" class="btn btn-primary mt-4">Dar de alta un nuevo usuario</a>';
+        }
+        ?>
     </div>
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <?php include_once("../estructura/footer.php"); ?>
+    <a href="../index/NuevoAuto.php" class="btn btn-primary mt-4">Volver al formulario</a>
+</div>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<?php include_once("../estructura/footer.php"); ?>
 </body>
 </html>
