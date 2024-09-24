@@ -22,7 +22,7 @@
 
     <nav class="navbar navbar-expand-lg bg-gradient shadow">
         <div class="container-fluid">
-            <a class="navbar-brand text-primary m-2 h1" href="../../../Menu.php">MENÚ PRINCIPAL</a>
+            <a class="navbar-brand text-primary m-2 h1" href="../../../index.php">MENÚ PRINCIPAL</a>
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="dropdown px-2">

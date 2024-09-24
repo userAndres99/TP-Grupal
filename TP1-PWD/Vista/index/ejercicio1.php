@@ -33,7 +33,7 @@ include_once("../estructura/header.php");
 
 </div>
 <div class="mt-4 p-5">
-    <a href="../../../Menu.php" class="btn btn-secondary">Volver al menú</a>
+    <a href="../../../index.php" class="btn btn-secondary">Volver al menú</a>
 </div>
 
 
