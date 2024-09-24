@@ -14,7 +14,7 @@
     <div class="card d-flex justify-content-center align-items-center border-0">
         <img class="card-img-top" style="height: 200px; width: auto;" src="https://sipcosystems.com/images/web-application-development.png" alt="Card image cap">
         <div class="card-body">
-            <h1 class="card-title my-2">Implementaciones TP1, TP2, TP3</h1>
+            <h1 class="card-title my-2">Implementaciones TPs 1,2,3 + TP4</h1>
             <p class="card-text h5 pt-2 pb-4">Programación Dinámica 2024 - Universidad Nacional del Comahue</p>
             <p class="card-text h6 pb-4">Integrantes<br>ALIAS, Paula Victoria<br>MARCHANDON GUTIERREZ, Diego Patricio<br>MENARD, Andres Esteban</p>
         </div>
