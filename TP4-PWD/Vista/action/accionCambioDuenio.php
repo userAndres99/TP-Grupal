@@ -20,7 +20,7 @@ $actualPropietario = ($auto == null) ? null : dismount($auto['objDuenio']);
 if ($nuevoPropietario <> null){
     if (is_array($auto)){
         if (($actualPropietario <> null) && ($actualPropietario['nroDni'] != $nuevoPropietario['nroDni'])){
-            $auto['objDuenio'] = $propietario;
+            $auto['objDuenio'] = $nuevoPropietario;
             if ($ABMAuto->modificacion($auto)){ #modificacion recibe un arreglo-objeto Auto
                 $modificado = true;
             } else $errorOp = 4;

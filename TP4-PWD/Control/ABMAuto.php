@@ -71,11 +71,15 @@ class ABMAuto{
 
         if(array_key_exists('patente',$param) && array_key_exists('marca',$param) && array_key_exists('modelo', $param) && array_key_exists('objDuenio', $param)){
             $obj = new Auto();
-            // $objDuenio = new Persona();
-            // $objDuenio->setNroDni($param['dniduenio']);
-            // $objDuenio->cargar();
-
-            $obj->setear($param['patente'], $param['marca'], $param['modelo'], $param['objDuenio']);
+            if (is_array($param['objDuenio'])){
+                if(array_key_exists('nroDni',$param['objDuenio'])){
+                    $persona = new ABMPersona();
+                    $objDuenio = $persona->buscar($param['objDuenio']['nroDni']);
+                    if (is_array($objDuenio) && count($objDuenio)>0){
+                        $obj->setear($param['patente'], $param['marca'], $param['modelo'], $objDuenio[0]);
+                    }
+                }
+            } else $obj->setear($param['patente'], $param['marca'], $param['modelo'], $param['objDuenio']);
         }
 
         return $obj;
